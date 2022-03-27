@@ -51,6 +51,7 @@ body{
     border: 1px solid var(--dark);
     display: inline-block;
     cursor: pointer;
+    text-transform: uppercase;
 }
 img{
     height: 100%;
@@ -140,7 +141,7 @@ img{
     position: relative;
     display: inline-block;
     font-size: 24px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 .title h1::after{
     content: '';
@@ -151,8 +152,11 @@ img{
     height: 3px;
     background: var(--dark);
 }
+.about .title h1{
+    margin-bottom: 50px;
+}
 .about{
-    padding: 20px;
+    padding: 20px 20px 50px;
     border-top: 1px solid var(--dark);
     background: var(--third);
     color: var(--cadan);
@@ -192,10 +196,10 @@ img{
     align-items: center;
     gap: 20px;
     margin-bottom: 30px;
-    text-align: center;
+    /* text-align: center; */
 }
 .projects .inner .card img{
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -223,12 +227,51 @@ img{
 .projects .inner .card .btns{
     margin-top: 10px;
 }
+.projects .inner .card .btns .btn i{
+    margin-left: 8px;
+    color: var(--dark);
+}
 .projects .inner .card .btns .btn:hover{
     background: var(--sec);
 }
-
-
-
+.projects .inner .card .btns .btn:hover i{
+    color: var(--cadan);
+}
+.projects .inner .card p{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 1.6;
+    font-weight: normal;
+}
+/* skils */
+.skills{
+    padding: 40px 20px 80px;
+    background: var(--third);
+    color: var(--cadan);
+}
+.skills .title{
+    margin-bottom: 40px;
+}
+.skills .inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    text-align: center;
+    gap: 10px;
+}
+.skills .inner div{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+.skills .inner div .icon{
+    color: var(--cadan);
+    font-size: 25px;
+    margin-right: 10px;
+}
+.skills .inner div .name{
+    color: var(--cadan);
+}
 
 
 
@@ -250,9 +293,23 @@ img{
     .container .body h1{
         font-size: 23px;
     }
+    .skills .inner{
+        grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    
+    }
 }
 @media(max-width:750px){
     .container .inner {
         flex-direction: column;
+    }
+}
+@media(max-width:850px){
+    .projects .inner .card{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .projects .inner .card img{
+        width: 100%;
+        height: auto;
     }
 }
