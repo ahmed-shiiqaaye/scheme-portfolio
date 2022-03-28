@@ -192,6 +192,9 @@ img{
     cursor: pointer;
     text-transform: capitalize;
 }
+.about .inner .text .btn:hover{
+    background: var(--pri);
+}
 /* projects */
 .projects {
     padding: 20px;
