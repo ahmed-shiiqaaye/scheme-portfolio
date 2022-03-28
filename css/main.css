@@ -239,6 +239,9 @@ img{
     margin-left: 8px;
     color: var(--dark);
 }
+.projects .inner .card .btns .btn {
+    color: var(--cadan);
+}
 .projects .inner .card .btns .btn:hover{
     background: var(--sec);
 }
